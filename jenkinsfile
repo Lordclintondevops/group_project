@@ -1,9 +1,5 @@
 pipeline {
     agent any  // Can be changed to a specific agent with Terraform installed
-
-    environment {
-        TERRAFORM_HOME = tool name: 'terraform', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
-        PATH = "${env.PATH}:${TERRAFORM_HOME}"  // Add Terraform bin directory to PATH
     }
 
     stages {
