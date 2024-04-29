@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', // Change branch as needed
-                   credentialsId: 'your-credentials-id', // Replace with your Git credentials ID
+                   // credentialsId: 'your-credentials-id', // Replace with your Git credentials ID
                    url: 'https://github.com/Lordclintondevops/group_project.git'  // Replace with your Git repository URL
             }
         }
