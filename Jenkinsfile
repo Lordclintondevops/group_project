@@ -36,7 +36,8 @@ pipeline {
               //  }
          //   }
             steps {
-                sh 'terraform apply -auto-approve' // Apply the Terraform configuration with auto-approval
+                sh 'terraform destroy -auto-apply
+               // sh 'terraform apply -auto-approve' // Apply the Terraform configuration with auto-approval
             }
         }
     }
