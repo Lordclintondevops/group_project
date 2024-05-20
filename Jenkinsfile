@@ -3,11 +3,17 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', // Change branch as needed
+        // stage('Checkout') {
+            //steps {
+                //git branch: 'main', // Change branch as needed
                    // credentialsId: 'your-credentials-id', // Replace with your Git credentials ID
-                   url: 'https://github.com/Lordclintondevops/group_project.git'  // Replace with your Git repository URL
+                 //  url: 'https://github.com/Lordclintondevops/group_project.git'  // Replace with your Git repository URL
+           // }
+       // }
+
+         stage('Checkout') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/tech']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Lordclintondevops/group_project.git']]])
             }
         }
 
