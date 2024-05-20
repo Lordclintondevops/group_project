@@ -1,6 +1,6 @@
 pipeline {
     agent any  // Can be changed to a specific agent with Terraform installed
-    }
+    
 
     stages {
         // stage('Checkout') {
