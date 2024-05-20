@@ -30,11 +30,11 @@ pipeline {
         }
 
         stage('Terraform Apply (Optional)') {
-            when {
-                expression { // Optional approval stage before applying
-                    return input message: 'Apply Terraform configuration?', submitter: 'USER_ANY', ok: 'Apply'
-                }
-            }
+          //  when {
+              //  expression { // Optional approval stage before applying
+                   // return input message: 'Apply Terraform configuration?', submitter: 'USER_ANY', ok: 'Apply'
+              //  }
+         //   }
             steps {
                 sh 'terraform apply -auto-approve' // Apply the Terraform configuration with auto-approval
             }
