@@ -13,7 +13,7 @@ pipeline {
 
          stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/tech']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Lordclintondevops/group_project.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Lordclintondevops/group_project.git']]])
             }
         }
 
